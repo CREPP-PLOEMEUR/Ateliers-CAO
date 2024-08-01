@@ -15,10 +15,10 @@ do
     dir=${dir%/}
     readme_file="$dir/README.md"
     zip_file="${dir}.zip"
-    github_url="https://github.com/CREPP-PLOEMEUR/Ateliers-CAO/tree/main//Exercices$dir"
-    download_url="https://github.com/CREPP-PLOEMEUR/Ateliers-CAO/raw/main/Exercices${dir}.zip"
+    github_url="https://github.com/CREPP-PLOEMEUR/Ateliers-CAO/tree/main/Exercices/$dir"
+    download_url="https://github.com/CREPP-PLOEMEUR/Ateliers-CAO/raw/main/Exercices/${dir}.zip"
     img_file="$dir/img/img.png"
-    img_github_url="https://github.com/CREPP-PLOEMEUR/Ateliers-CAO/raw/main/Exercices$dir/img/img.png"
+    img_github_url="https://github.com/CREPP-PLOEMEUR/Ateliers-CAO/raw/main/Exercices/$dir/.img/img.png"
 
     author_line=$(grep "<!-- AUTEUR" "$readme_file")
     author_name=$(echo "$author_line" | cut -d ':' -f2 | cut -d '-' -f1 )
