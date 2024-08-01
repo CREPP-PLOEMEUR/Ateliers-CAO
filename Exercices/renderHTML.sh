@@ -6,19 +6,19 @@ output_file="render_HTML.html"
 # Démarrer le contenu du body
 echo "<link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css' rel='stylesheet'>
 <div class='container mt-5'>
-    <h1 class='text-center mb-4'>Simulation KiCad</h1>" > $output_file
-echo "<p style='font-size:1.2em;'>Cette page contralise des simulations réalisées sous Kicad.</p>" >> $output_file    
+    <h1 class='text-center mb-4'>Exercices Freecad</h1>" > $output_file
+echo "<p style='font-size:1.2em;'>Cette page contralise les exercices sous Freecad.</p>" >> $output_file    
 
 # Parcourir tous les dossiers du répertoire courant
 for dir in */
 do
     dir=${dir%/}
-    readme_file="$dir/readme.md"
+    readme_file="$dir/README.md"
     zip_file="${dir}.zip"
-    github_url="https://github.com/CREPP-PLOEMEUR/Simulations_KICAD/tree/main/$dir"
-    download_url="https://github.com/CREPP-PLOEMEUR/Simulations_KICAD/raw/main/${dir}.zip"
+    github_url="https://github.com/CREPP-PLOEMEUR/Ateliers-CAO/Exercices/tree/main/$dir"
+    download_url="https://github.com/CREPP-PLOEMEUR/Ateliers-CAO/Exercices/raw/main/${dir}.zip"
     img_file="$dir/img/img.png"
-    img_github_url="https://github.com/CREPP-PLOEMEUR/Simulations_KICAD/raw/main/$dir/img/img.png"
+    img_github_url="https://github.com/CREPP-PLOEMEUR/Ateliers-CAO/Exercices/raw/main/$dir/img/img.png"
 
     author_line=$(grep "<!-- AUTEUR" "$readme_file")
     author_name=$(echo "$author_line" | cut -d ':' -f2 | cut -d '-' -f1 )
